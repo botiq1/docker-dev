@@ -30,6 +30,10 @@ RUN pecl install xdebug
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer global require --no-progress "fxp/composer-asset-plugin:~1.3.0"
 
+RUN curl -sS https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -o /usr/local/bin/wp
+
+RUN chmod 744 /usr/local/bin/wp 
+
 COPY Docker/php/docker-entrypoint.sh /docker-entrypoint.sh
 COPY Docker/php/docker-run.sh /docker-run.sh
 
