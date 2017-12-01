@@ -11,6 +11,7 @@ services:
     volumes:
       - ".:/var/www"
       - "~/.composer/cache:/root/.composer/cache"
+      - "~/.wp-cli/cache:/root/.wp-cli/cache"
     expose:
       - "9000"
     depends_on:
