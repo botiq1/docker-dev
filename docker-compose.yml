@@ -34,4 +34,7 @@ services:
     image: mysql:5.7
     command: mysqld --sql-mode=""
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: "mysql-docker-default"
+      MYSQL_DATABASE: "app"
+      MYSQL_USER: "db_user"
+      MYSQL_PASSWORD: "db_pass"
