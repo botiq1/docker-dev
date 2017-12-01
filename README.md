@@ -7,3 +7,7 @@ branch: yii2-advanced
 ## Yii2 2amigos Template ##
 
 branch: yii2-2amigos
+
+## WordPress Template ##
+
+branch: wp
